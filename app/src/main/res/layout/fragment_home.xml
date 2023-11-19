@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.HomeFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="@color/shimmer_color"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="@color/shimmer_color"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv2">
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tv_layout"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintStart_toStartOf="@+id/cv1"
+                    app:layout_constraintTop_toBottomOf="@+id/cv1" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_layout" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="66dp"
+                    android:layout_height="0dp"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_layout"
+                    app:layout_constraintEnd_toEndOf="@+id/cv1"
+                    app:layout_constraintTop_toTopOf="@+id/tv_layout" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="@color/shimmer_color"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tv_shimmer"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shimmer_color"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/cv_shimmer"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_shimmer" />
+
+                <TextView
+                    android:id="@+id/tv_shimmer1"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shimmer_color"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_shimmer"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_shimmer" />
+
+                <TextView
+
+                    android:id="@+id/tv_shimmer2"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shimmer_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_shimmer"
+                    app:layout_constraintEnd_toEndOf="@+id/cv_shimmer"
+                    app:layout_constraintTop_toTopOf="@+id/tv_shimmer" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
